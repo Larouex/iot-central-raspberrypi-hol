@@ -106,6 +106,6 @@ This is a “logical” eject - meaning it closes files and preps the SD card fo
 * Make sure your RPi is not plugged in
 * Looking from the top of the RPi, install the SD card (the slot is on the bottom of the board) as shown in the picture below...
 
-![alt text](../Assets/pi-sd.png "Pi SD Card Insert") 
+![alt text](../../Assets/pi-sd.png "Pi SD Card Insert") 
 
 ## [NEXT: Module 02 - Getting to Know the Raspberry Pi](../Module02/README.md)
