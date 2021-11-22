@@ -37,9 +37,11 @@ First up lets talk about LED's and how to determine the polarity.
 * Button (Optional)
 
 Resistor 100 OHM
+
 ![alt text](../../Assets/100-ohm.jpg "100 OHM")
 
 Here is the diagram of our layout...
+
 ![alt text](../../Assets/raspberry-pi-stoplight-breadboard.png "Breadboard Layout for Stoplight")
 
 
