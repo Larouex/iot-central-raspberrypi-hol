@@ -193,14 +193,6 @@ git clone https://github.com/Larouex/iot-central-raspberrypi-hol.git
 
 Now we have all we need to configure the Pi for the sessions. Next we will run a setup script and it will automatically confgure everything. Type the following commands into the terminal window...
 
-### Step 4 - Run the Configuration Script
-
-``` bash
-# assuming you are still in the Projects folder...
-cd iot-central-raspberrypi-hol
-git clone https://github.com/Larouex/cold-hub-azure-iot-central.git
-```
-
 # Setting up the Development Toolchain for your Workstation
 I used the generic term "Workstation" as a way to differentiate that this is the main computer (workstation, laptop, etc.) that you use to do your primary development work. We assume it exists on the same network (if using an ethernet connection) and you can install the tools that will allow you to connect and develop code remotely on the Raspberry Pi.
 ### Install Git
