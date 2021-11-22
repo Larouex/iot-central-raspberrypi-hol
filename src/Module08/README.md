@@ -26,18 +26,18 @@ import struct
 # --------------------------------------------------------
 # Status
 # --------------------------------------------------------
-Alert = 5
-Wait = 6
-Good = 16
+Stop = 25
+Caution = 8
+Go = 7
 
 # --------------------------------------------------------
 # Set Mode Leds
 # --------------------------------------------------------
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
-GPIO.setup(Alert, GPIO.OUT)
-GPIO.setup(Wait, GPIO.OUT)
-GPIO.setup(Good, GPIO.OUT)
+GPIO.setup(Stop, GPIO.OUT)
+GPIO.setup(Caution, GPIO.OUT)
+GPIO.setup(Go, GPIO.OUT)
 
 # --------------------------------------------------------
 # Start the Loop...
@@ -45,20 +45,20 @@ GPIO.setup(Good, GPIO.OUT)
 try:
     while(1):
 
-        print ("Setting the Alert LED [ON]")
-        GPIO.output(Alert, GPIO.HIGH)
+        print ("Setting the STOP LED [ON]")
+        GPIO.output(Stop, GPIO.HIGH)
         time.sleep(5) 
-        GPIO.output(Alert, GPIO.LOW)
+        GPIO.output(Stop, GPIO.LOW)
 
         print ("Setting the Wait LED [ON]")
-        GPIO.output(Wait, GPIO.HIGH)
+        GPIO.output(Caution, GPIO.HIGH)
         time.sleep(5) 
-        GPIO.output(Wait, GPIO.LOW)
+        GPIO.output(Caution, GPIO.LOW)
 
         print ("Setting the Good LED [ON]")
-        GPIO.output(Good, GPIO.HIGH)
+        GPIO.output(Go, GPIO.HIGH)
         time.sleep(5) 
-        GPIO.output(Good, GPIO.LOW)
+        GPIO.output(Go, GPIO.LOW)
 
 except (RuntimeError, TypeError, NameError):
     print ("Failed to Set up the LED Routine. Error %s" % RuntimeError)
@@ -66,11 +66,11 @@ except (RuntimeError, TypeError, NameError):
     pass
 except KeyboardInterrupt:  
     # Turn off all LED's
-    GPIO.output(Alert, GPIO.LOW)
-    GPIO.output(Wait, GPIO.LOW)
-    GPIO.output(Good, GPIO.LOW)
+    GPIO.output(Stop, GPIO.LOW)
+    GPIO.output(Caution, GPIO.LOW)
+    GPIO.output(Go, GPIO.LOW)
     GPIO.cleanup()
-   
+    
 ```
 
 
