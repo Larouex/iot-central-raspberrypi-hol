@@ -24,6 +24,18 @@ LED VDD (Pin 18F)           GPIO 24 (Pin 18)    White cable
 LED GND (Pin 17F)           GND (Pin 20)        Black cable
 ```
 ## Creating a Raspberry Pi Stoplight
+First up lets talk about LED's and how to determine the polarity.
+![alt text](../../Assets/led-polarity.png "LED Polarity")
+
+### Bill of Materials
+* Red LED
+* Yellow LED
+* Green LED
+* 3 100 OHM Resistors
+* Buzzer (Optional)
+* Button (Optional)
+
+Here is the diagram of our layout...
 ![alt text](../../Assets/raspberry-pi-stoplight-breadboard.png "Breadboard Layout for Stoplight")
 
 
