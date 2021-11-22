@@ -23,5 +23,8 @@ SCK (Pin 8G)                I2C1 SCL (Pin 5)    Orange cable
 LED VDD (Pin 18F)           GPIO 24 (Pin 18)    White cable
 LED GND (Pin 17F)           GND (Pin 20)        Black cable
 ```
+## Creating a Raspberry Pi Stoplight
+![alt text](../../Assets/raspberry-pi-stoplight-breadboard "Breadboard Layout for Stoplight")
+
 
 ## [Module 07 - Setting up the Raspberry Pi for Running Python Applications](../Module07/README.md)
