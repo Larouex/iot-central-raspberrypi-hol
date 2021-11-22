@@ -49,8 +49,17 @@ Welcome to the Azure IoT Central Basic Bootcamp and Hand On Lab. We will be sett
     - [Connecting Headless (no display)](#connecting-headless-no-display)
     - [Connecting to the Raspberry Pi using SSH](#connecting-to-the-raspberry-pi-using-ssh)
   - [Modules](#modules)
-    - [Module01](#module-01)
-  
+    - [Module 01 - Setting up your Raspberry Pi](#module-01---setting-up-your-raspberry-pi)
+    - [Module 02 - Getting to Know the Raspberry Pi](#module-02---getting-to-know-the-raspberry-pi)
+    - [Module 03 - Setting up your Development Toolchain](#module-03---setting-up-your-development-toolchain)
+    - [Module 04 - Enabling Capabilities on the Raspberry Pi](#module-04---enabling-capabilities-on-the-raspberry-pi)
+    - [Module 05 - Connecting using SSH to your Raspberry Pi](#module-06---introduction-to-breadboarding)
+    - [Module 06 - Introduction to Breadboarding](#module-06---introduction-to-breadboarding))
+    - [Module 07 - Setting up the Raspberry Pi for Running Python Applications](#module-07---setting-up-the-raspberry-pi-for-running-python-applications)
+    - [Module 08 - Communicating with Sensors, LED, etc](#module-08---communicating-with-sensors-led-etc)
+    - [Module 09 - Create your Azure IoT Central Application](#module-09---create-your-azure-iot-central-application)
+    - [Module 10 - Connecting to Azure IoT Central (Python SDK)](#module-10---connecting-to-azure-iot-central-python-sdk)
+
 
 ## Bill of Materials for IoT Central Bootcamp
 The following are needed for this workshop...
@@ -306,24 +315,3 @@ sudo pip3 install --upgrade setuptools
 
 ## Module 10 - Connecting to Azure IoT Central (Python SDK)
 [LINK: Module 10 - Connecting to Azure IoT Central (Python SDK)](./src/Module10/README.md)
-
-## Module 11 - Device Authentication Types (SaS, Certs, TPM and IR Certs)
-[LINK: Module 11 -  Device Authentication Types (SaS, Certs, TPM and IR Certs)](./src/Module11/README.md)
-
-## Module 12 - Sending Telemetry from your Raspberry Pi to IoT Central
-[LINK: Module 12 - Sending Telemetry from your Raspberry Pi to IoT Central](./src/Module12/README.md)
-
-## Module 13 - Writing Device Commands and Executing on your Raspberry Pi to/from IoT Central
-[LINK: Module 13 - Writing Device Commands and Executing on your Raspberry Pi to/from IoT Central](./src/Module13/README.md)
-
-## Module 14 - Twin Updates and Notifications of Cloud Desired Properties
-[LINK: Module 14 - Twin Updates and Notifications of Cloud Desired Properties](./src/Module14/README.md)
-
-## Module 15 - Working with other Cloud Systems (Things Network)
-[LINK: Module 15 - Working with other Cloud Systems (Things Network)](./src/Module15/README.md)
-
-## Module 16 - Connecting the Things Network to Azure IoT Central Via Device Bridge
-[LINK: Module 16 - Connecting the Things Network to Azure IoT Central Via Device Bridge](./src/Module16/README.md)
-
-## Module 17 - Azure IoT Central Continuous Data Export Scenarios
-[LINK: Module 17 - Azure IoT Central Continuous Data Export Scenarios](./src/Module17/README.md)
