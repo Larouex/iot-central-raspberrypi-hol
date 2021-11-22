@@ -25,6 +25,7 @@ LED GND (Pin 17F)           GND (Pin 20)        Black cable
 ```
 ## Creating a Raspberry Pi Stoplight
 First up lets talk about LED's and how to determine the polarity.
+
 ![alt text](../../Assets/led-polarity.png "LED Polarity")
 
 ### Bill of Materials
