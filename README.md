@@ -161,15 +161,14 @@ Click "OK" and respond with "Yes" to reboot the Raspberry Pi and apply the confi
 
 
 
-### Step 3 - Clone the "ColdHubs Code and Configuration" Repository
-In this step we will clone the code and configuration scripts to the Rtaspberry Pi. The code and scripts make setting up the Pi for communication, reading sensors and device provisioning in IoT Central... a fully automated process. 
+### Step 3 - Clone the "IoT Central Basic Bootcamp Code and Configuration" Repository
+In this step we will clone the code and configuration scripts to the Raspberry Pi. The code and scripts make setting up the Pi for communication, reading sensors and device provisioning in IoT Central... a fully automated process. 
 
 What the scripts and code enable...
 
 * Bring all of the needed application code and configuration scripts to the Pi
 * Installation of the Raspberry Pi to use the latest version of Python
 * Installation of the Azure IoT SDK for Python
-* Configure all of the Sensors
 * Installation of the applications that support provisioing of the device and monotoring with telemetry to Azure IoT Central
 
 #### Next we will create our Project folder and clone this repository. 
@@ -193,20 +192,16 @@ Type the following commands into the terminal window to clone the repository...
 ``` bash
 mkdir Projects
 cd Projects
-git clone https://github.com/Larouex/cold-hub-azure-iot-central.git
+git clone https://github.com/Larouex/iot-central-raspberrypi-hol.git
 ```
 
-Here are the results...
+Now we have all we need to configure the Pi for the sessions. Next we will run a setup script and it will automatically confgure everything. Type the following commands into the terminal window...
 
-![alt text](./Assets/rpi-setup-script-2.png "Pi Clone and Setup 3")
-
-Now we have all we need to configure the Pi for the ColdHub applications. Next we will run a setup script and it will automatically confgure everything. Type the following commands into the terminal window...
-
-### Step 4 - Run the ColdHubs Configuration Script
+### Step 4 - Run the Configuration Script
 
 ``` bash
 # assuming you are still in the Projects folder...
-cd cold-hub-azure-iot-central
+cd iot-central-raspberrypi-hol
 git clone https://github.com/Larouex/cold-hub-azure-iot-central.git
 ```
 
@@ -601,55 +596,55 @@ Version 1.04
 
 
 ## Module 01 - Setting up your Raspberry Pi
-[LINK: Module 01 - Setting up your Raspberry Pi](./Module01/README.md)
+[LINK: Module 01 - Setting up your Raspberry Pi](./src/Module01/README.md)
 
 ### Video for Module 01 - Setting up your Raspberry Pi
 [![](http://img.youtube.com/vi/Bb5ookAZsjI/0.jpg)](http://www.youtube.com/watch?v=Bb5ookAZsjI "Module 01 - Setting up your Raspberry Pi")
 
 ## Module 02 - Getting to Know the Raspberry Pi
-[LINK: Module 02 - Getting to Know the Raspberry Pi](./Module02/README.md)
+[LINK: Module 02 - Getting to Know the Raspberry Pi](./src/Module02/README.md)
 
 ## Module 03 - Setting up your Development Toolchain
-[LINK: Module 03 - Setting up your Development Toolchain](./Module03/README.md)
+[LINK: Module 03 - Setting up your Development Toolchain](./src/Module03/README.md)
 
 ## Module 04 - Enabling Capabilities on the Raspberry Pi
-[LINK: Module 04 - Enabling Capabilities on the RPi](./Module04/README.md)
+[LINK: Module 04 - Enabling Capabilities on the RPi](./src/Module04/README.md)
 
 ## Module 05 - Connecting using SSH to your Raspberry Pi
-[LINK: Module 05 - Connecting using SSH to your Raspberry Pi](./Module05/README.md)
+[LINK: Module 05 - Connecting using SSH to your Raspberry Pi](./src//Module05/README.md)
 
 ## Module 06 - Introduction to Breadboarding
-[LINK: Module 06 - Introduction to Breadboarding](./Module06/README.md)
+[LINK: Module 06 - Introduction to Breadboarding](./src/Module06/README.md)
 
 ## Module 07 - Setting up the Raspberry Pi for Running Python Applications
-[LINK: Module 07 - Setting up the Raspberry Pi for Running Python Applications](./Module07/README.md)
+[LINK: Module 07 - Setting up the Raspberry Pi for Running Python Applications](./src/Module07/README.md)
 
 ## Module 08 - Communicating with Sensors, LED, etc
-[LINK: Module 08 - Communicating with Sensors, LED, etc](./Module08/README.md)
+[LINK: Module 08 - Communicating with Sensors, LED, etc](./src/Module08/README.md)
 
 ## Module 09 - Create your Azure IoT Central Application
-[LINK: Module 09 - Create your Azure IoT Central Application](./Module09/README.md)
+[LINK: Module 09 - Create your Azure IoT Central Application](./src/Module09/README.md)
 
 ## Module 10 - Connecting to Azure IoT Central (Python SDK)
-[LINK: Module 10 - Connecting to Azure IoT Central (Python SDK)](./Module10/README.md)
+[LINK: Module 10 - Connecting to Azure IoT Central (Python SDK)](./src/Module10/README.md)
 
 ## Module 11 - Device Authentication Types (SaS, Certs, TPM and IR Certs)
-[LINK: Module 11 -  Device Authentication Types (SaS, Certs, TPM and IR Certs)](./Module11/README.md)
+[LINK: Module 11 -  Device Authentication Types (SaS, Certs, TPM and IR Certs)](./src/Module11/README.md)
 
 ## Module 12 - Sending Telemetry from your Raspberry Pi to IoT Central
-[LINK: Module 12 - Sending Telemetry from your Raspberry Pi to IoT Central](./Module12/README.md)
+[LINK: Module 12 - Sending Telemetry from your Raspberry Pi to IoT Central](./src/Module12/README.md)
 
 ## Module 13 - Writing Device Commands and Executing on your Raspberry Pi to/from IoT Central
-[LINK: Module 13 - Writing Device Commands and Executing on your Raspberry Pi to/from IoT Central](./Module13/README.md)
+[LINK: Module 13 - Writing Device Commands and Executing on your Raspberry Pi to/from IoT Central](./src/Module13/README.md)
 
 ## Module 14 - Twin Updates and Notifications of Cloud Desired Properties
-[LINK: Module 14 - Twin Updates and Notifications of Cloud Desired Properties](./Module14/README.md)
+[LINK: Module 14 - Twin Updates and Notifications of Cloud Desired Properties](./src/Module14/README.md)
 
 ## Module 15 - Working with other Cloud Systems (Things Network)
-[LINK: Module 15 - Working with other Cloud Systems (Things Network)](./Module15/README.md)
+[LINK: Module 15 - Working with other Cloud Systems (Things Network)](./src/Module15/README.md)
 
 ## Module 16 - Connecting the Things Network to Azure IoT Central Via Device Bridge
-[LINK: Module 16 - Connecting the Things Network to Azure IoT Central Via Device Bridge](./Module16/README.md)
+[LINK: Module 16 - Connecting the Things Network to Azure IoT Central Via Device Bridge](./src/Module16/README.md)
 
 ## Module 17 - Azure IoT Central Continuous Data Export Scenarios
-[LINK: Module 17 - Azure IoT Central Continuous Data Export Scenarios](./Module17/README.md)
+[LINK: Module 17 - Azure IoT Central Continuous Data Export Scenarios](./src/Module17/README.md)
