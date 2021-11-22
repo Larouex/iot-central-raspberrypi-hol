@@ -32,13 +32,9 @@ First up lets talk about LED's and how to determine the polarity.
 * Red LED
 * Yellow LED
 * Green LED
-* 3 100 OHM Resistors
+* 3 330 OHM Resistors
 * Buzzer (Optional)
 * Button (Optional)
-
-Resistor 100 OHM
-
-![alt text](../../Assets/100-ohm.jpg "100 OHM")
 
 Here is the diagram of our layout...
 
