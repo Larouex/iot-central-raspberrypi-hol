@@ -3,7 +3,7 @@
 
 ## A Tour of the Board
 
-![alt text](../Assets/rpi-pinout.png "Pi Pinout")
+![alt text](../../Assets/rpi-pinout.png "Pi Pinout")
 
 #### NOTE: The following is the text of the Raspberry Pi Org...
 
@@ -44,7 +44,7 @@ TX (GPIO14); RX (GPIO15)
 
 The Raspberry header is the key to its ability to interface with the real world. The Pi either uses a 40-pin or 26-pin depending on the model and it is important to understand how those pins are arranged and labelled.
 
-![alt text](../Assets/pi-header.png "Pi Header")
+![alt text](../../Assets/pi-header.png "Pi Header")
 
 If you are reading the Raspberry Pi copyright statement printed on the PCB then Pin 1 is in the bottom left and Pin 40 is in the top right.
 
