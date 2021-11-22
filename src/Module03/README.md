@@ -38,10 +38,10 @@ On Windows (from a CMD window or Powershell):
 ### Install all the Tools for Visual Studio Code
 These are a set of tools we will use to develop our apps on the Raspberry Pi. You can open the Extensions sidebar with "Shift+Ctrl+X) or click the icon in the side navigator bar.
 
-![alt text](../Assets/vs-code-python.png "VS Code Python")
+![alt text](../../Assets/vs-code-python.png "VS Code Python")
 
-![alt text](../Assets/vs-code-remote-ssh.png "VS Code Remote SSH")
+![alt text](../../Assets/vs-code-remote-ssh.png "VS Code Remote SSH")
 
-![alt text](../Assets/vs-code-remote-edit.png "VS Code Remote SSH Edit")
+![alt text](../../Assets/vs-code-remote-edit.png "VS Code Remote SSH Edit")
 
 ## [NEXT: Module 04 - Enabling Capabilities on the RPi](../Module04/README.md)

@@ -3,13 +3,13 @@
 
 The breadboard is a handy layout that facilitiates prototyping with the Raspberry Pi...
 
-![alt text](../Assets/breadboard-layout.png "Breadboard Layout")
+![alt text](../../Assets/breadboard-layout.png "Breadboard Layout")
 
 In the above example, you would set one voltage rail for 5V and the other for 3.3V and this would let you try out all the sensors.
 
-![alt text](../Assets/3-raspberry-pi-sensor-connection.png "Breadboarding 1")
+![alt text](../../Assets/3-raspberry-pi-sensor-connection.png "Breadboarding 1")
 
-![alt text](../Assets/real-world-breadboarded-connected-pi.png "Breadboarding 2")
+![alt text](../../Assets/real-world-breadboarded-connected-pi.png "Breadboarding 2")
 
 The BME280 sensor can collect temperature and humidity data. The LED blinks when the device sends a message to the cloud.
 For sensor pins, use the following wiring:
