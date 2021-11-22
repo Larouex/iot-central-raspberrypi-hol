@@ -22,11 +22,11 @@ Our first thing to set up is your Raspbian image on the SD card that you load wi
 * Place your card into your SD slot on your computer and insure the system can see the card. DO NOT FORMAT IT if you are prompted by your Operating System, just dismiss the dialogs
 * Start the SD Card Formatter software you downloaded. 
 
-![alt text](../Assets/sd-formatter-app.png "SD Card Formatter")
+![alt text](../../Assets/sd-formatter-app.png "SD Card Formatter")
 
 * The dialog will open, find your SD card (make sure the right drive is selected) and choose the option to "Overwrite format" and give your image a name 
 
-![alt text](../Assets/sd-formatter-dialog.png "SD Card Formatter")
+![alt text](../../Assets/sd-formatter-dialog.png "SD Card Formatter")
 
 Have a coffee, it will take a bit to do a 16gig card...
 
@@ -35,15 +35,15 @@ Have a coffee, it will take a bit to do a 16gig card...
 * Close the SD Formatter Card application
 * Open the balenaEtcher application...
 
-![alt text](../Assets/balenaetcher-app.png "balenaEtcher application")
+![alt text](../../Assets/balenaetcher-app.png "balenaEtcher application")
 
 * Click the "Select Image" button and select the zip file from the location where you saved it when you downloaded "Buster" from the Raspberry Pi download page
  
- ![alt text](../Assets/balenaetcher-dialog-select-image.png "balenaEtcher select image")
+ ![alt text](../../Assets/balenaetcher-dialog-select-image.png "balenaEtcher select image")
 
  * Select the "Flash!" button and sit back let the etcher copy the image and verify it
 
-![alt text](../Assets/balenaetcher-dialog-flash.png "balenaEtcher flash")
+![alt text](../../Assets/balenaetcher-dialog-flash.png "balenaEtcher flash")
 
 #### Enable ssh to allow remote login
 For security reasons, ssh is no longer enabled by default. To enable it you need to place an empty file named ssh (no extension) in the root of the boot disk.
