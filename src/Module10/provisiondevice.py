@@ -18,7 +18,7 @@ from classes.config import Config
 # -------------------------------------------------------------------------------
 #   Provision Device
 # -------------------------------------------------------------------------------
-async def provision_device(Id, NumberOfDevices, verbose):
+async def provision_device(Id, verbose):
 
     provisiondevice = ProvisionDevice(Log, verbose)
     id = int(Id)
@@ -153,7 +153,7 @@ async def main(argv):
                 )
                 return
 
-    await provision_device(id, number_of_devices, verbose)
+    await provision_device(id, verbose)
 
 
 if __name__ == "__main__":

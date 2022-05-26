@@ -14,7 +14,6 @@ import logging as Log
 # Our classes
 from classes.devicecache import DeviceCache
 from classes.secrets import Secrets
-from classes.recipes import Recipes
 from classes.symmetrickey import SymmetricKey
 import classes.constants as CONSTANTS
 from classes.printheader import PrintHeader
@@ -83,7 +82,7 @@ async def main(argv):
         _print_header.print(_module, _method, _message, True)
 
     # Load the secrets file
-    _secrets = Secrets(Log, _verbose)
+    _secrets = Secrets(Log)
 
     # __Verbose__
     _message = "(Secrets) SUCCESS: Loaded the Secrets File (secrets.json)!"
@@ -100,16 +99,6 @@ async def main(argv):
         _message = "(Secrets) GATEWAY PRIMARY KEY: {contents}".format(contents = _secrets.gateway_primary_key)
         _print_header.print(_module, _method, _message, True)
         _message = "(Secrets) GATEWAY SECONDARY KEY: {contents}".format(contents = _secrets.gateway_secondary_key)
-        _print_header.print(_module, _method, _message, True)
-
-    # Load the recipes file
-    _recipes = Recipes(Log)
-
-    # __Verbose__
-    _message = "(Recipes) SUCCESS: Loaded the Recipes File (recipes.json)!"
-    _print_header.forceprint(_message)
-    if (_verbose == True):
-        _message = "(Recipes) CONTENTS: {contents}".format(contents = _recipes.data)
         _print_header.print(_module, _method, _message, True)
 
     return

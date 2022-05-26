@@ -113,6 +113,8 @@ async def main(argv):
         device_client = DeviceClient(Log, device_name)
         await device_client.connect()
 
+        message_count = 1
+
         while True:
             simulate.RunSimulation()
 
@@ -129,9 +131,12 @@ async def main(argv):
             )
 
             # Payload
-            payload =  '{{"ambient_temperature": {:.2f},"ambient_humidity": {:},"chamber_temperature": {:.2f},"chamber_humidity": {:}}}'
-            print("PAYLOAD: " + payload.format(simulate.ambient_temperature, simulate.ambient_humdity, simulate.chamber_temperature, simulate.chamber_humdity))
+            payload_template =  '{{"ambient_temperature": {:.2f},"ambient_humidity": {:},"chamber_temperature": {:.2f},"chamber_humidity": {:}, "message_count": {:}}}'
+            payload = payload_template.format(simulate.ambient_temperature, simulate.ambient_humdity, simulate.chamber_temperature, simulate.chamber_humdity, message_count)
+            print("PAYLOAD: " + payload)
             await device_client.send_telemetry(payload, config.data["Device"]["Default Component Id"], config.data["Device"]["NameSpace"])
+            message_count = message_count + 1
+
             print(
                 "...SLEEPING FOR...{:} Seconds".format(
                     config.data["Simulation"]["Loop Delay"]

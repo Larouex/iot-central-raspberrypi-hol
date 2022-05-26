@@ -75,7 +75,7 @@ class DeviceClient:
     #               Iot Central to the Node Id's for the Opc Server.
     # -------------------------------------------------------------------------------
     async def send_telemetry(self, Telemetry, InterfacelId, InterfaceInstanceName):
-        msg = Message(json.dumps(Telemetry))
+        msg = Message(Telemetry)
         msg.content_encoding = "utf-8"
         msg.content_type = "application/json"
         msg.custom_properties["$.ifname"] = InterfaceInstanceName
