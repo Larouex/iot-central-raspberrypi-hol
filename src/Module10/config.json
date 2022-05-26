@@ -1,0 +1,33 @@
+{
+  "AppName": "IoTCentralRaspberryPiHOL",
+  "Description": "Hands on Lab for Raspberry Pi and IoT Central",
+  "Enable Cloud Telemetry": true,
+  "Telemetry Frequency In Seconds": 60,
+  "Read Delay In Seconds": 5,
+  "Temperature Format": "F",
+  "NameSpace": "iotc",
+  "Device": {
+    "Device Name Prefix": "iotc-rpi-{id}",
+    "NameSpace": "iotc",
+    "Default Component Id": "dtmi:iotc:rpihol;1"
+  },
+  "Simulation" :{
+    "Loop Delay": 15,
+    "Ambient Temperature": {
+      "Minimum": 56,
+      "Maximum": 81
+    },
+    "Chamber Temperature": {
+      "Minimum": 61,
+      "Maximum": 80
+    },
+    "Ambient Humidity": {
+      "Minimum": 71,
+      "Maximum": 78
+    },
+    "Chamber Humidity": {
+      "Minimum": 72,
+      "Maximum": 85
+    }
+  }
+}

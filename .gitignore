@@ -1,0 +1,4 @@
+secrets.json
+*.pdf
+.iotc-venv/
+__pycache__/
