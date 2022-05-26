@@ -1,76 +1,56 @@
 # IoT Central Device Training
 ## Module 01 - Setting up your Raspberry Pi
 
-### Video for Module 01 - Setting up your Raspberry Pi
-[![](http://img.youtube.com/vi/Bb5ookAZsjI/0.jpg)](http://www.youtube.com/watch?v=Bb5ookAZsjI "Module 01 - Setting up your Raspberry Pi")
+The Raspberry Pi is a fully functional computer and a variety of operating systems can be loaded and used. We like to stick with the official Raspbain OS that is based on Debian Linux and is easy to install and use.
 
 ### Configuring the OS for the RPi (Raspbian)
-Our first thing to set up is your Raspbian image on the SD card that you load will into the MicroSD cart slot on the Raspberry Pi.
+Our first thing to set up is your Raspbian image on the SD card that you load will into the MicroSD cart slot on the Raspberry Pi. You will need at least a 8 gig card and the ability to I/O to the card using a SD reader.
 
-#### Here are the tools you need to install...
+#### Install the Operating System on the SD Card
 
-* The official SD Card Formatter from the SD Association. Install for your OS. [LINK: SD Card Formatter](https://www.sdcard.org/downloads/formatter/)
+* The official _Raspberry Pi Imager_ software. This simplifies the installation of the OS onto the SD Card and handled the formatting and imaging. [LINK: Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
-* The tool called "balenaEtcher" which is used to copy your Raspbian image onto the formatted SD card. [LINK: balenaEtcher Download Page](https://www.balena.io/etcher/)
+![Raspberry Pi Imager](../../Assets/pi-os-imager-download.png "Raspberry Pi Imager")
 
-* The OS Image for the RPi. We will install the full package named "Raspbian Buster with desktop and recommended software" [LINK: Raspbian Buster Download Page](https://www.raspberrypi.org/downloads/raspbian/)
+* Goto the page in the link and install the **_Raspberry Pi Imager_** software for your operating system.
+* Next, fire up the **_Raspberry Pi Imager_** software...
 
-###### NOTE: balenaEtcher does not require the SD card to be formatted before imaging with Raspbian. I include the process for completeness, but you can skip it if you are so inclined!
+![Raspberry Pi Imager Software Home Screen](../../Assets/pi-os-installer.png "Raspberry Pi Imager Software Home Screen")
 
-#### Now that you have all of that software installed, let's build our SD card for the RPi...
+* Press **CTRL+SHIFT+X** on the keyboard to open **Advanced options** window...
 
-* Place your card into your SD slot on your computer and insure the system can see the card. DO NOT FORMAT IT if you are prompted by your Operating System, just dismiss the dialogs
-* Start the SD Card Formatter software you downloaded. 
+![Raspberry Pi Imager Software Advanced Options #1](../../Assets/pi-os-installer-advanced-options-1.png "Raspberry Pi Imager Software Advanced Options #1")
 
-![alt text](../../Assets/sd-formatter-app.png "SD Card Formatter")
+####Set the following options...
 
-* The dialog will open, find your SD card (make sure the right drive is selected) and choose the option to "Overwrite format" and give your image a name 
+* Enable **Set Hostname:** and give your Pi a name you want or leave the default.
+* Enable **Enable SSH** and set the option to **Use password authentication**
+* Enable **Set username and password** to your preferences and something you can remember! :) Hint: Click the **Show password** option and insure it is all correct.
+* Enable **Configure wireless LAN** and setup to your wireless network details.
+* Enable **Set locale settings** to your time zone and preferred keyboard layout.
 
-![alt text](../../Assets/sd-formatter-dialog.png "SD Card Formatter")
+Click the **SAVE** button!
 
-Have a coffee, it will take a bit to do a 16gig card...
+####Install the Operating System...
+Click the **CHOOSE OS** button and the dialog will pop up for for OS choices to install. We are going to choose the first option **Raspberry PI OS (32-bit)**...
 
-#### Next Let's Copy Buster to the SD Card...
+![Raspberry Pi Imager Software Choose OS](../../Assets/pi-os-installer-choose-os.png "Raspberry Pi Imager Software Choose OS")
 
-* Close the SD Formatter Card application
-* Open the balenaEtcher application...
+Click the **CHOOSE STORAGE** button and the dialog will open, find your SD card (make sure the right drive is selected) and click on it.
 
-![alt text](../../Assets/balenaetcher-app.png "balenaEtcher application")
+![Raspberry Pi Imager Software Choose Card](../../Assets/pi-os-installer-choose-card.png "Raspberry Pi Imager Software Choose Card")
 
-* Click the "Select Image" button and select the zip file from the location where you saved it when you downloaded "Buster" from the Raspberry Pi download page
- 
- ![alt text](../../Assets/balenaetcher-dialog-select-image.png "balenaEtcher select image")
+Click the **WRITE** button and CONFIRM you want to overwrite the card (if prompted) and start...
 
- * Select the "Flash!" button and sit back let the etcher copy the image and verify it
+*Kick back and have some coffee and let everything complete...*
 
-![alt text](../../Assets/balenaetcher-dialog-flash.png "balenaEtcher flash")
+When teh write prcoess completes, you will see this notification...
 
-#### Enable ssh to allow remote login
-For security reasons, ssh is no longer enabled by default. To enable it you need to place an empty file named ssh (no extension) in the root of the boot disk.
+![Raspberry Pi Imager Software Card Completed](../../Assets/pi-os-installer-completed.png "Raspberry Pi Imager Software Card Completed")
 
-##### Mac instructions (enable ssh)
-    Open up a terminal window and run this command:
-    
-    touch /Volumes/boot/ssh
-
-##### Windows instructions (ssh)
-    Run Notepad
-    * In a new file put in one space and nothing more
-    * Click File / Save As …
-    * Be sure to set Save as type to All Files (so the file is NOT saved with a .txt extension)
-    * Call the file ssh and save it
-    * Close the file
-    
-    If you are comfortable with the Windows command line you could try this instead (untested!):
-        * Open up a command line
-        * Switch to the drive and root where boot is located:
-        * Type: type NUL >> ssh
-        * Verify that file ssh was created
-
-#### Add your WiFi network info
 Create a file in the root of boot called: wpa_supplicant.conf (instructions below). Then paste the following into it (adjusting for your ISO 3166 alpha-2 country code, network name and network password):
 
-```
+```bash
 country=US
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
@@ -81,24 +61,23 @@ network={
 }
 ```
 
-##### Mac instructions (wifi settings)
+#### Mac instructions (wifi settings)
 Create a new empty file that will hold network info:
 
-     touch /Volumes/boot/wpa_supplicant.conf
+* touch /Volumes/boot/wpa_supplicant.conf
+* Edit the file that you just created and paste the text above into it (adjusting for the name of your country code, network name and network password):
 
-Edit the file that you just created and paste the text above into it (adjusting for the name of your country code, network name and network password):
-
-##### Windows instructions (wifi settings)
+#### Windows instructions (wifi settings)
 * Run Notepad
 * Paste in the contents above (adjusting for the name of your country code, network name and network password)
-* Click File / Save As …
-    Be sure to set Save as type to All Files (so the file is NOT saved with a .txt extension)
+* Click File / Save As ...
+* Be sure to set Save as type to All Files (so the file is NOT saved with a .txt extension)
 * Call the file wpa_supplicant.conf and save it
 * Close the file
- 
-#### Eject the micro SD card
-Right-click on boot (on your desktop or File Explorer) and select the Eject option
-This is a “logical” eject - meaning it closes files and preps the SD card for removal - you still have to pull the card out yourself
+
+#### Eject the Micro SD card
+* Right-click on boot (on your desktop or File Explorer) and select the Eject option
+* This is a “logical” eject - meaning it closes files and preps the SD card for removal - you still have to pull the card out yourself
 
 
 #### Congratulations, you have prepared your OS for the Raspberry Pi
